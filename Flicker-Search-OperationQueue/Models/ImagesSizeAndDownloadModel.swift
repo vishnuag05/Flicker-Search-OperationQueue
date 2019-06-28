@@ -1,6 +1,6 @@
 //
 //  ImagesSizeAndDownloader.swift
-//  wooqer
+//  Flicker-Search-OperationQueue
 //
 //  Created by Vishnu Agarwal on 27/06/19.
 //  Copyright © 2019 Vishnu Agarwal. All rights reserved.
@@ -63,6 +63,12 @@ class ImagesSizeAndDownloadModel {
             startDownload(photo: photo, indexPath: indexPath, completionBlock: completionBlock)
         case .new:
             startFetchSize(photo: photo, indexPath: indexPath, completionBlock: completionBlock)
+        case .failed:
+            if photo.url == nil {
+                startFetchSize(photo: photo, indexPath: indexPath, completionBlock: completionBlock)
+            } else {
+                startDownload(photo: photo, indexPath: indexPath, completionBlock: completionBlock)
+            }
         default:
             break
         }

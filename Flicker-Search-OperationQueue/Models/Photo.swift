@@ -1,6 +1,6 @@
 //
 //  PhotoDetail.swift
-//  wooqer
+//  Flicker-Search-OperationQueue
 //
 //  Created by Vishnu Agarwal on 27/06/19.
 //  Copyright © 2019 Vishnu Agarwal. All rights reserved.

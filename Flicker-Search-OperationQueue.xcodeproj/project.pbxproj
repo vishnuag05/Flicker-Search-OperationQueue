@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2763A65322C50DA100C8596F /* wooqer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wooqer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flicker-Search-OperationQueue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2763A65622C50DA100C8596F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2763A65822C50DA100C8596F /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		2763A65D22C50DA200C8596F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		2763A64A22C50DA100C8596F = {
 			isa = PBXGroup;
 			children = (
-				2763A65522C50DA100C8596F /* wooqer */,
+				2763A65522C50DA100C8596F /* Flicker-Search-OperationQueue */,
 				2763A65422C50DA100C8596F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		2763A65422C50DA100C8596F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2763A65322C50DA100C8596F /* wooqer.app */,
+				2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2763A65522C50DA100C8596F /* wooqer */ = {
+		2763A65522C50DA100C8596F /* Flicker-Search-OperationQueue */ = {
 			isa = PBXGroup;
 			children = (
 				2763A68322C5E09C00C8596F /* Caching */,
@@ -83,7 +83,7 @@
 				2763A65D22C50DA200C8596F /* Assets.xcassets */,
 				2763A66922C50DCE00C8596F /* Supporting Files */,
 			);
-			path = wooqer;
+			path = "Flicker-Search-OperationQueue";
 			sourceTree = "<group>";
 		};
 		2763A66822C50DC200C8596F /* App Delegate */ = {
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2763A65222C50DA100C8596F /* wooqer */ = {
+		2763A65222C50DA100C8596F /* Flicker-Search-OperationQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2763A66522C50DA200C8596F /* Build configuration list for PBXNativeTarget "wooqer" */;
+			buildConfigurationList = 2763A66522C50DA200C8596F /* Build configuration list for PBXNativeTarget "Flicker-Search-OperationQueue" */;
 			buildPhases = (
 				2763A64F22C50DA100C8596F /* Sources */,
 				2763A65022C50DA100C8596F /* Frameworks */,
@@ -186,9 +186,9 @@
 			);
 			dependencies = (
 			);
-			name = wooqer;
+			name = "Flicker-Search-OperationQueue";
 			productName = wooqer;
-			productReference = 2763A65322C50DA100C8596F /* wooqer.app */;
+			productReference = 2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2763A64E22C50DA100C8596F /* Build configuration list for PBXProject "wooqer" */;
+			buildConfigurationList = 2763A64E22C50DA100C8596F /* Build configuration list for PBXProject "Flicker-Search-OperationQueue" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2763A65222C50DA100C8596F /* wooqer */,
+				2763A65222C50DA100C8596F /* Flicker-Search-OperationQueue */,
 			);
 		};
 /* End PBXProject section */
@@ -392,12 +392,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C668XQH46X;
-				INFOPLIST_FILE = "wooqer/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Flicker-Search-OperationQueue/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vishnu.wooqer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vishnu.Flicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -410,12 +410,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C668XQH46X;
-				INFOPLIST_FILE = "wooqer/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Flicker-Search-OperationQueue/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vishnu.wooqer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vishnu.Flicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2763A64E22C50DA100C8596F /* Build configuration list for PBXProject "wooqer" */ = {
+		2763A64E22C50DA100C8596F /* Build configuration list for PBXProject "Flicker-Search-OperationQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2763A66322C50DA200C8596F /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2763A66522C50DA200C8596F /* Build configuration list for PBXNativeTarget "wooqer" */ = {
+		2763A66522C50DA200C8596F /* Build configuration list for PBXNativeTarget "Flicker-Search-OperationQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2763A66622C50DA200C8596F /* Debug */,
