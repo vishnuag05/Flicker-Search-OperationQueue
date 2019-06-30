@@ -36,12 +36,10 @@ public class AsynchronousOperation: Operation {
     public final override var isFinished:     Bool { return state == .finished }
     
     // KVN for dependent properties
-    
     open override class func keyPathsForValuesAffectingValue(forKey key: String) -> Set<String> {
-        if ["isReady", "isFinished", "isExecuting"].contains(key) {
+        if ["isReady", "isExecuting", "isFinished"].contains(key) {
             return [#keyPath(state)]
         }
-        
         return super.keyPathsForValuesAffectingValue(forKey: key)
     }
     
@@ -67,6 +65,6 @@ public class AsynchronousOperation: Operation {
     /// Call this function to finish an operation that is currently executing
     
     public final func finish() {
-        if isExecuting { state = .finished }
+         state = .finished 
     }
 }

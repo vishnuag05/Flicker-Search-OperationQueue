@@ -19,7 +19,6 @@ class ImagesSizeAndDownloadModel {
     lazy var downloadQueue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "Download Queue"
-        queue.maxConcurrentOperationCount = 2
         return queue
     }()
     func suspendAllOperations() {

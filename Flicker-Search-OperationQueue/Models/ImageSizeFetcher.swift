@@ -10,6 +10,7 @@ import UIKit
 
 class ImageSizeFetcher: AsynchronousOperation {
     var photo: Photo
+    weak var task: URLSessionTask?
     init(_ photo: Photo) {
         self.photo = photo
     }
@@ -17,8 +18,12 @@ class ImageSizeFetcher: AsynchronousOperation {
         if isCancelled {
             return
         }
+        if photo.url != nil {
+            self.finish()
+            return
+        }
         let apiPath = String(format: Api.fetchPhotosSize, Api.apiKeyFlicker, photo.id)
-        URLSession.shared.dataTask(with: URL(string: apiPath)! ) { [weak self] (data, response, error) in
+        task = URLSession.shared.dataTask(with: URL(string: apiPath)! ) { [weak self] (data, response, error) in
             if error == nil {
                 if let data = data {
                     let decoder = JSONDecoder.init()
@@ -34,6 +39,11 @@ class ImageSizeFetcher: AsynchronousOperation {
                 self?.photo.state = .failed
             }
             self?.finish()
-        }.resume()
+        }
+        task?.resume()
+    }
+    override func cancel() {
+        super.cancel()
+        task?.cancel()
     }
 }
