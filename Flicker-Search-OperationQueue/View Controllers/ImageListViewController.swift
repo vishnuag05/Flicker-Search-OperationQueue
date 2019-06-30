@@ -98,7 +98,7 @@ class ImageListViewController: UIViewController {
                             self?.collectionViewPhotos.reloadData()
                         })
                         if let dispatchItem = self?.dispatchWorkItem {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: dispatchItem)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150), execute: dispatchItem)
                         }
                     } else {
                         self?.startOperations(indexPaths: [indexpath])
