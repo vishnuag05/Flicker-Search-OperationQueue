@@ -10,7 +10,7 @@ import UIKit
 
 class NetworkManager {
     class func getRequest(path: String, success: @escaping(Data) -> Void, failure: @escaping(NSError) -> Void) {
-        URLSession.shared.dataTask(with: URLRequest.init(url: URL(string: path)!)) { (data, response, error) in
+        URLSession.shared.dataTask(with: URLRequest.init(url: URL(string: path.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!)) { (data, response, error) in
             if let error = error {
                 failure(error as NSError)
             } else if let data = data {

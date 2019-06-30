@@ -10,7 +10,8 @@
 import Foundation
 
 struct Api {
-    static let apiKeyFlicker = ""
+    //add your key which you can get from flicker
+    static let apiKeyFlicker = "3275614c71d8ee38565a76d57f4c2f9a"
     static let fetchPhotos = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&tags=%@&format=json&nojsoncallback=1&page=%d"
     static let fetchPhotosSize = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=%@&photo_id=%@&format=json&nojsoncallback=1"
 }

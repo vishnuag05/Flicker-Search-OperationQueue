@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageSizeFetcher: Operation {
+class ImageSizeFetcher: AsynchronousOperation {
     var photo: Photo
     init(_ photo: Photo) {
         self.photo = photo
@@ -33,6 +33,7 @@ class ImageSizeFetcher: Operation {
                 //error
                 self.photo.state = .failed
             }
+            self.finish()
         }.resume()
     }
 }

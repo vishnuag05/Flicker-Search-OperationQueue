@@ -21,7 +21,20 @@
 		2763A68022C54F4200C8596F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A67F22C54F4200C8596F /* ImageDownloader.swift */; };
 		2763A68222C5508600C8596F /* ImageSizeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A68122C5508600C8596F /* ImageSizeFetcher.swift */; };
 		2763A68722C5E55E00C8596F /* Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A68622C5E55E00C8596F /* Caching.swift */; };
+		2763A69022C664A700C8596F /* Flicker_Search_OperationQueueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A68F22C664A700C8596F /* Flicker_Search_OperationQueueUITests.swift */; };
+		2763A69822C692A400C8596F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A69722C692A400C8596F /* SnapshotHelper.swift */; };
+		2763A69A22C7DB0C00C8596F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763A69922C7DB0C00C8596F /* AsyncOperation.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2763A69222C664A700C8596F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2763A64B22C50DA100C8596F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2763A65222C50DA100C8596F;
+			remoteInfo = "Flicker-Search-OperationQueue";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flicker-Search-OperationQueue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +53,22 @@
 		2763A67F22C54F4200C8596F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		2763A68122C5508600C8596F /* ImageSizeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSizeFetcher.swift; sourceTree = "<group>"; };
 		2763A68622C5E55E00C8596F /* Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caching.swift; sourceTree = "<group>"; };
+		2763A68D22C664A700C8596F /* Flicker-Search-OperationQueueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flicker-Search-OperationQueueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763A68F22C664A700C8596F /* Flicker_Search_OperationQueueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flicker_Search_OperationQueueUITests.swift; sourceTree = "<group>"; };
+		2763A69122C664A700C8596F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763A69722C692A400C8596F /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		2763A69922C7DB0C00C8596F /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2763A65022C50DA100C8596F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763A68A22C664A700C8596F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				2763A65522C50DA100C8596F /* Flicker-Search-OperationQueue */,
+				2763A68E22C664A700C8596F /* Flicker-Search-OperationQueueUITests */,
 				2763A65422C50DA100C8596F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */,
+				2763A68D22C664A700C8596F /* Flicker-Search-OperationQueueUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +99,7 @@
 		2763A65522C50DA100C8596F /* Flicker-Search-OperationQueue */ = {
 			isa = PBXGroup;
 			children = (
+				2763A68822C65F1F00C8596F /* New Group */,
 				2763A68322C5E09C00C8596F /* Caching */,
 				2763A67C22C5355700C8596F /* Network */,
 				2763A67322C5263E00C8596F /* Extensions */,
@@ -125,6 +153,7 @@
 			children = (
 				2763A67A22C532F600C8596F /* Photo.swift */,
 				2763A67F22C54F4200C8596F /* ImageDownloader.swift */,
+				2763A69922C7DB0C00C8596F /* AsyncOperation.swift */,
 				2763A68122C5508600C8596F /* ImageSizeFetcher.swift */,
 				2763A67822C5310F00C8596F /* ImagesSizeAndDownloadModel.swift */,
 			);
@@ -171,6 +200,23 @@
 			path = Caching;
 			sourceTree = "<group>";
 		};
+		2763A68822C65F1F00C8596F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		2763A68E22C664A700C8596F /* Flicker-Search-OperationQueueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2763A68F22C664A700C8596F /* Flicker_Search_OperationQueueUITests.swift */,
+				2763A69122C664A700C8596F /* Info.plist */,
+				2763A69722C692A400C8596F /* SnapshotHelper.swift */,
+			);
+			path = "Flicker-Search-OperationQueueUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +237,24 @@
 			productReference = 2763A65322C50DA100C8596F /* Flicker-Search-OperationQueue.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2763A68C22C664A700C8596F /* Flicker-Search-OperationQueueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2763A69622C664A700C8596F /* Build configuration list for PBXNativeTarget "Flicker-Search-OperationQueueUITests" */;
+			buildPhases = (
+				2763A68922C664A700C8596F /* Sources */,
+				2763A68A22C664A700C8596F /* Frameworks */,
+				2763A68B22C664A700C8596F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2763A69322C664A700C8596F /* PBXTargetDependency */,
+			);
+			name = "Flicker-Search-OperationQueueUITests";
+			productName = "Flicker-Search-OperationQueueUITests";
+			productReference = 2763A68D22C664A700C8596F /* Flicker-Search-OperationQueueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +267,10 @@
 				TargetAttributes = {
 					2763A65222C50DA100C8596F = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					2763A68C22C664A700C8596F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 2763A65222C50DA100C8596F;
 					};
 				};
 			};
@@ -220,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				2763A65222C50DA100C8596F /* Flicker-Search-OperationQueue */,
+				2763A68C22C664A700C8596F /* Flicker-Search-OperationQueueUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +303,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2763A68B22C664A700C8596F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2763A67E22C5356E00C8596F /* NetworkManager.swift in Sources */,
+				2763A69A22C7DB0C00C8596F /* AsyncOperation.swift in Sources */,
 				2763A67522C5266500C8596F /* UIView+Pin.swift in Sources */,
 				2763A67B22C532F600C8596F /* Photo.swift in Sources */,
 				2763A67722C52C1700C8596F /* ImageDetailViewController.swift in Sources */,
@@ -256,7 +333,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2763A68922C664A700C8596F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763A69022C664A700C8596F /* Flicker_Search_OperationQueueUITests.swift in Sources */,
+				2763A69822C692A400C8596F /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2763A69322C664A700C8596F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2763A65222C50DA100C8596F /* Flicker-Search-OperationQueue */;
+			targetProxy = 2763A69222C664A700C8596F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2763A65F22C50DA200C8596F /* LaunchScreen.storyboard */ = {
@@ -422,6 +516,44 @@
 			};
 			name = Release;
 		};
+		2763A69422C664A700C8596F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C668XQH46X;
+				INFOPLIST_FILE = "Flicker-Search-OperationQueueUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vishnu.Flicker-Search-OperationQueueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flicker-Search-OperationQueue";
+			};
+			name = Debug;
+		};
+		2763A69522C664A700C8596F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C668XQH46X;
+				INFOPLIST_FILE = "Flicker-Search-OperationQueueUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vishnu.Flicker-Search-OperationQueueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flicker-Search-OperationQueue";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +571,15 @@
 			buildConfigurations = (
 				2763A66622C50DA200C8596F /* Debug */,
 				2763A66722C50DA200C8596F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2763A69622C664A700C8596F /* Build configuration list for PBXNativeTarget "Flicker-Search-OperationQueueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763A69422C664A700C8596F /* Debug */,
+				2763A69522C664A700C8596F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
