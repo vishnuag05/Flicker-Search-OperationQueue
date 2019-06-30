@@ -27,6 +27,7 @@ class ImageListViewController: UIViewController {
         searchBar.text = "car"
         return searchBar
     }()
+    var dispatchWorkItem: DispatchWorkItem?
     let imageSizeAndDownloadModel = ImagesSizeAndDownloadModel()
     var photos: [Photo] = []
     override func viewDidLoad() {
@@ -92,8 +93,12 @@ class ImageListViewController: UIViewController {
                     //update row
                     let photo = self?.photos[indexpath.row]
                     if photo?.state == .downloaded {
-                        DispatchQueue.main.async {
-                            self?.collectionViewPhotos.reloadItems(at: [indexpath])
+                        self?.dispatchWorkItem?.cancel()
+                        self?.dispatchWorkItem = DispatchWorkItem.init(block: {
+                            self?.collectionViewPhotos.reloadData()
+                        })
+                        if let dispatchItem = self?.dispatchWorkItem {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: dispatchItem)
                         }
                     } else {
                         self?.startOperations(indexPaths: [indexpath])
