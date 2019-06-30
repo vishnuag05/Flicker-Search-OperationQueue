@@ -19,7 +19,7 @@ class ImagesSizeAndDownloadModel {
     lazy var downloadQueue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "Download Queue"
-        queue.maxConcurrentOperationCount = 4
+        queue.maxConcurrentOperationCount = 2
         return queue
     }()
     func suspendAllOperations() {
@@ -85,11 +85,8 @@ class ImagesSizeAndDownloadModel {
             if downloader.isCancelled {
                 return
             }
-            
-            DispatchQueue.main.async {
                 self.downloadsInProgress.removeValue(forKey: indexPath)
                 completionBlock(indexPath)
-            }
         }
         downloadsInProgress[indexPath] = downloader
         downloadQueue.addOperation(downloader)
@@ -105,11 +102,8 @@ class ImagesSizeAndDownloadModel {
             if fetcher.isCancelled {
                 return
             }
-            
-            DispatchQueue.main.async {
                 self.sizingInProgress.removeValue(forKey: indexPath)
                 completionBlock(indexPath)
-            }
         }
         sizingInProgress[indexPath] = fetcher
         sizingQueue.addOperation(fetcher)

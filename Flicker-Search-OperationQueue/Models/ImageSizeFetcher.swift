@@ -18,22 +18,22 @@ class ImageSizeFetcher: AsynchronousOperation {
             return
         }
         let apiPath = String(format: Api.fetchPhotosSize, Api.apiKeyFlicker, photo.id)
-        URLSession.shared.dataTask(with: URL(string: apiPath)! ) { (data, response, error) in
+        URLSession.shared.dataTask(with: URL(string: apiPath)! ) { [weak self] (data, response, error) in
             if error == nil {
                 if let data = data {
                     let decoder = JSONDecoder.init()
                     if let size = try? decoder.decode(SizeMain.self, from: data).correctSize {
-                        self.photo.url = size.source
-                        self.photo.state = PhotoState.sizeFetched
+                        self?.photo.url = size.source
+                        self?.photo.state = PhotoState.sizeFetched
                     }
                 } else {
                     //no data
                 }
             } else {
                 //error
-                self.photo.state = .failed
+                self?.photo.state = .failed
             }
-            self.finish()
+            self?.finish()
         }.resume()
     }
 }

@@ -39,6 +39,7 @@ class ImageListViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Code to put while memory is low as we are storing images in model, it can take a lot if memory
+        Caching.shared.cacheImage.removeAllObjects()
     }
     //MARK: - Fetch Pics
     func fetchPhotoIds(tag: String) {
@@ -85,11 +86,18 @@ class ImageListViewController: UIViewController {
         collectionViewPhotos.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
     }
     func startOperations(indexPaths: Set<IndexPath>) {
-        for indexPath in indexPaths {
-            imageSizeAndDownloadModel.startOperations(photo: photos[indexPath.row], indexPath: indexPath) { [weak self] (indexpath) in
-                //update row
-                DispatchQueue.main.async {
-                    self?.collectionViewPhotos.reloadItems(at: [indexpath])
+        DispatchQueue.global(qos: .userInteractive).async {
+            for indexPath in indexPaths {
+                self.imageSizeAndDownloadModel.startOperations(photo: self.photos[indexPath.row], indexPath: indexPath) { [weak self] (indexpath) in
+                    //update row
+                    let photo = self?.photos[indexpath.row]
+                    if photo?.state == .downloaded {
+                        DispatchQueue.main.async {
+                            self?.collectionViewPhotos.reloadItems(at: [indexpath])
+                        }
+                    } else {
+                        self?.startOperations(indexPaths: [indexpath])
+                    }
                 }
             }
         }
@@ -105,6 +113,7 @@ extension ImageListViewController: UICollectionViewDelegate, UICollectionViewDat
         let photo = photos[indexPath.row]
         if let url = photo.url, let image = Caching.shared.cacheImage.object(forKey: url as NSURL) {
             cell.imageViewPhoto.image = image
+            return cell
         } else {
             cell.imageViewPhoto.image = #imageLiteral(resourceName: "placeholder")
         }
